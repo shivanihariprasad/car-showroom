@@ -1,0 +1,83 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+<style>
+    nav{
+        background-color:#808080;
+        height:50px;
+       text-align:right;
+        font-family: "Roboto", sans-serif;
+       
+    }
+
+   .Navigation .a, .text{
+       line-height:50px;
+       height:50px;
+        font-size: 18px;
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+       
+       padding:10px 5px 10px;
+    }
+      .Navigation  .a:hover {
+            background-color:#000000;
+            color: white;
+           height:50px;
+            line-height:50px;
+            padding:10px 5px 10px;
+        }
+     
+      .CarImage
+      {
+          height:45px;
+          width:60px;
+          float:left;
+
+      }
+      body{
+            background: #008AC2; /* fallback for old browsers */
+    background: -webkit-linear-gradient(right, #008AC2, #8DC26F);
+    background: -moz-linear-gradient(right, #008AC2, #8DC26F);
+    background: -o-linear-gradient(right, #008AC2, #8DC26F);
+    background: linear-gradient(to left, #008AC2, #8DC26F);
+    font-family: "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+      }
+</style>
+<html>
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+     
+        
+        <div class="Navigation">
+            <nav>
+                <div style="float:left;line-height:40px; font-size:22px; color:white; font-weight:bolder;  padding:5px 5px 8px;">
+  <img src="Images/if_Mercedes__SL_88293.ico" class="CarImage" />&nbsp; &nbsp; CarVanza
+                  
+                    </div>
+                 <asp:HyperLink runat="server" NavigateUrl="~/Default.aspx" ID="home" CssClass="a" Text="Home"></asp:HyperLink>&nbsp;
+                 <asp:HyperLink runat="server" NavigateUrl="~/Login.aspx" ID="login" CssClass="a" Text="Login"></asp:HyperLink>&nbsp;
+                 <asp:HyperLink runat="server" NavigateUrl="~/Register.aspx" ID="register" CssClass="a" Text="Register"></asp:HyperLink>&nbsp;
+                 <asp:HyperLink runat="server" NavigateUrl="~/Default.aspx" ID="logout" CssClass="a" Text="Logout"></asp:HyperLink>
+  
+</nav>
+        </div>
+        <div>
+            <br />
+            <br/>
+        </div>  
+  
+    <div id="con"> 
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">  
+          
+        </asp:ContentPlaceHolder>  
+    </div>  
+</body>
+</html>
